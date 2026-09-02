@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@font-face {
+	font-family: 'Valley Sans';
+	src: url('/fonts/Valley_Sans/ValleySans-VariableFont_wght.ttf') format('truetype');
+	font-weight: 100 900;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Valley Sans';
+	src: url('/fonts/Valley_Sans/ValleySans-Italic-VariableFont_wght.ttf') format('truetype');
+	font-weight: 100 900;
+	font-style: italic;
+	font-display: swap;
+}
+
+:root {
+    color-scheme: light dark;
+	
+    --valley-sans: 'Valley Sans', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    --background: light-dark(white, black);
+}
+
+body {
+	font-family: var(--valley-sans);
+    background: var(--background);
+}
+
+.markdown-alert-title {
+    display: none !important;
+}

@@ -1,6 +1,26 @@
+import {Panel, Group, Separator} from "react-resizable-panels"
+
+import Aside from "./components/Aside"
+import Editor from "./components/Editor"
+import Renderer from "./components/Renderer"
+
 function App() {
   return (
-    <h1>Hello world</h1>
+    <main className="flex flex-col w-screen h-screen">
+      <Aside />
+
+      <Group className="flex-1" orientation="horizontal">
+          <Panel minSize="20%">
+            <Editor />
+          </Panel>
+
+          <Separator className="bg-neutral-600 w-px" />
+
+          <Panel minSize="20%">
+            <Renderer />
+          </Panel>
+      </Group>
+    </main>
   )
 }
 
